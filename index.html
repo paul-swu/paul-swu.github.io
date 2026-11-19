@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shuwei (Paul) Wu 吴蜀魏 - Temple University</title>
+<meta name="description" content="Shuwei (Paul) Wu (吴蜀魏), Ph.D. student in Computer and Information Sciences at Temple University, advised by Prof. Longin Jan Latecki. Research: multimodal large language models, visual grounding, training-free test-time methods.">
+<meta name="author" content="Shuwei Wu">
+<link rel="canonical" href="https://paul-swu.github.io/">
+<style>
+  body {
+    margin: 0;
+    background: #fff;
+    color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #222;
+  }
+  #layout { max-width: 900px; margin: 0 auto; padding: 32px 16px 40px; }
+  a { color: #0645ad; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1 { font-size: 24px; font-weight: 600; margin: 0 0 12px; }
+  h2 {
+    color: #222;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 28px 0 8px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #ddd;
+  }
+  table { border-collapse: collapse; }
+  td { vertical-align: top; }
+  ul { margin: 6px 0; padding-left: 24px; }
+  li { margin: 3px 0; }
+  /* photo is exactly as tall as the text block on its right (name to the Google Scholar line) */
+  .profile { display: flex; align-items: stretch; gap: 24px; }
+  .profile .photo { flex: none; position: relative; width: 200px; } /* width set by fitPhoto() below */
+  .profile .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .profile .info { flex: 1; min-width: 0; }
+  .profile .info h1 { line-height: 1.1; }
+  .profile .info p:last-child { margin-bottom: 0; }
+  .pub { width: 100%; margin-top: 8px; }
+  .pub td { padding: 10px 0; }
+  .pub .thumb { width: 220px; padding-right: 20px; vertical-align: middle; }
+  .pub .thumb img { width: 210px; border: 1px solid #ddd; display: block; }
+  .pub .title { font-weight: bold; }
+  .dated { width: 100%; }
+  .dated td { padding: 3px 0; }
+  .dated .when { width: 150px; white-space: nowrap; padding-right: 16px; }
+  .me { font-weight: bold; }
+  .footer { margin-top: 36px; color: #888; font-size: 13px; }
+  @media (max-width: 640px) {
+    .profile { flex-direction: column; gap: 12px; }
+    .profile .photo { width: 160px !important; aspect-ratio: 400 / 404; }
+    .pub td { display: block; }
+    .pub .thumb { width: auto; padding: 0 0 10px; }
+    .dated .when { width: 105px; white-space: normal; }
+  }
+</style>
+</head>
+<body>
+<div id="layout">
+
+<div class="profile">
+    <div class="photo"><img src="images/photo.jpg" alt="Shuwei Wu" onerror="this.parentNode.style.display='none'"></div>
+    <div class="info">
+      <h1>Shuwei (Paul) Wu (吴蜀魏)</h1>
+      <p>
+        I am a first-year Ph.D. student in Computer and Information Sciences at
+        <a href="https://cis.temple.edu/">Temple University</a>, advised by
+        <a href="https://cis.temple.edu/~latecki/">Prof. Longin Jan Latecki</a>.
+        Before that, I received my MRes from Xi'an Jiaotong-Liverpool University,
+        where I worked with <a href="https://scholar.google.com/citations?user=OJRvfT0AAAAJ">Siyue Yu</a>
+        and <a href="https://scholar.google.com/citations?user=AdxzTKsAAAAJ">Jimin Xiao</a>.
+      </p>
+      <p>
+        Email: <a href="mailto:shuwei.wu@temple.edu">shuwei.wu@temple.edu</a>,
+        <a href="mailto:wushuwei2000@gmail.com">wushuwei2000@gmail.com</a><br>
+        <a href="https://scholar.google.com/citations?user=EErJ-hkAAAAJ&amp;hl=en">Google Scholar</a>
+      </p>
+    </div>
+</div>
+<script>
+  // Make the photo as tall as the text next to it (keeps the photo's 400:404 shape).
+  function fitPhoto() {
+    var photo = document.querySelector('.profile .photo');
+    var info = document.querySelector('.profile .info');
+    if (!photo || !info || window.innerWidth <= 640) return;
+    for (var k = 0; k < 4; k++) {   // a wider photo can rewrap the text, so settle in a few passes
+      photo.style.width = (info.offsetHeight * 400 / 404) + 'px';
+    }
+  }
+  window.addEventListener('load', fitPhoto);
+  window.addEventListener('resize', fitPhoto);
+  fitPhoto();
+</script>
+
+<h2>Research Interest</h2>
+<p>I work on computer vision and multimodal learning. Currently I focus on:</p>
+<ul>
+  <li>Multimodal large language models</li>
+  <li>Visual grounding</li>
+  <li>Training-free, test-time methods for multimodal models</li>
+</ul>
+
+<h2>News</h2>
+<table class="dated">
+  <tr><td class="when">2026 Aug.</td><td>Joined Temple University as a Ph.D. student.</td></tr>
+  <tr><td class="when">2026 Jun.</td><td>Our work Bound3D got accepted by <a href="https://eccv.ecva.net/">ECCV 2026</a>!</td></tr>
+  <tr><td class="when">2026 Feb.</td><td>Our work TF-SSD got accepted by <a href="https://cvpr.thecvf.com/">CVPR 2026</a>!</td></tr>
+</table>
+
+<h2>Publications</h2>
+<table class="pub">
+  <tr>
+    <td class="thumb"><img src="images/bound3d.png" alt="Bound3D"></td>
+    <td>
+      <div class="title">Don't Starve the Boundaries: Boundary-Constrained Label Propagation for Weakly Supervised 3D Segmentation</div>
+      <span class="me">Shuwei Wu</span>, Shuo Jin, Zhijin He, Siyue Yu<sup>&dagger;</sup>, Eng Gee Lim, Qiufeng Wang, Jimin Xiao<br>
+      European Conference on Computer Vision (<b>ECCV</b>), 2026<br>
+      [<a href="https://eccv.ecva.net/virtual/2026/poster/5688">Paper</a>]
+      [<a href="https://kimsure.github.io/Bound3D/">Project Page</a>]
+    </td>
+  </tr>
+  <tr>
+    <td class="thumb"><img src="images/tfssd.png" alt="TF-SSD"></td>
+    <td>
+      <div class="title">TF-SSD: A Strong Pipeline via Synergic Mask Filter for Training-free Co-salient Object Detection</div>
+      Zhijin He, Shuo Jin, Siyue Yu<sup>&dagger;</sup>, <span class="me">Shuwei Wu</span>, Bingfeng Zhang, Li Yu, Jimin Xiao<br>
+      IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2026<br>
+      [<a href="https://openaccess.thecvf.com/content/CVPR2026/html/He_TF-SSD_A_Strong_Pipeline_via_Synergic_Mask_Filter_for_Training-free_CVPR_2026_paper.html">Paper</a>]
+      [<a href="https://arxiv.org/abs/2604.00549">arXiv</a>]
+      [<a href="https://github.com/hzz-yy/TF-SSD">Code</a>]
+    </td>
+  </tr>
+</table>
+
+<h2>Education</h2>
+<table class="dated">
+  <tr><td class="when">2026.08 &ndash; now</td><td>Ph.D. in Computer and Information Sciences, Temple University</td></tr>
+  <tr><td class="when">2024.09 &ndash; 2026.07</td><td>MRes in Pattern Recognition and Intelligent Systems, Xi'an Jiaotong-Liverpool University (Distinction)</td></tr>
+</table>
+
+<h2>Teaching</h2>
+<table class="dated">
+  <tr><td class="when">2026 Fall</td><td>Teaching Assistant, CIS 5590 Vision-Language Models, Temple University</td></tr>
+</table>
+
+<div class="footer">Last updated: Nov 2026</div>
+
+</div>
+</body>
+</html>

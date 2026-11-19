@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paul-swu.github.io/sitemap.xml
